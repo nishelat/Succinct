@@ -88,5 +88,10 @@ body{
 .mainTitle {
 	font-family:'Quicksand' , serif ;
 	text-align: center;
-	/*margin-bottom: 100px;
+	/*margin-bottom: 100px;*/
+}
+
+
+#form{
+	color: red;
 }
