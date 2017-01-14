@@ -6,4 +6,4 @@ added a comment
 
 HELLO FRANDS I AM HIGH ON SUGAR
 
-Jason is a weeb
+Jason isn't a weeb
