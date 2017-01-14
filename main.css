@@ -2,13 +2,16 @@
 #title{
 	position: absolute;
 	margin-top: 90px;
-	font-size: 60px;
-	margin-left:50vw; /*subtract this with half of the text pixel length to get center alignment (use javascript/jquery)*/
+	font-size: 80px;
+	font-weight: 10px;
+	/*margin-left:50vw; /*subtract this with half of the text pixel length to get center alignment (use javascript/jquery)*/
+		color: #6B5066;
+
 
 }
 
 .mainTitle {
-	font-family:'Quicksand' , serif ;
+font-family: 'Laila', serif;
 	text-align: center;
 	display:block;
 	margin: 0 auto;
@@ -39,7 +42,7 @@ nav ul {
 
 .mainHeader nav a:hover, .mainHeader nav a:active,
 .mainHeader nav .active a:link, .mainHeader nav .active a:visited {
-	background-color: #CF5C3F;
+	background-color: #2fb6b6;
 	text-shadow: none;
 
 }
@@ -139,7 +142,6 @@ font-weight: 200;
 font-size: 15px;
 font-family: Verdana;
 box-shadow: 1px 1px 5px #CCC;
-text-align: center;
 opacity: 1;
 
 }
@@ -159,7 +161,7 @@ opacity: 1;
 
 #button{
 	/*STYLE THE GO BUTTON*/
-	background-color: #4CAF50; /* Green */
+	background-color: #773344; /* Green */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -176,6 +178,7 @@ opacity: 1;
 #button:hover{
 	-webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
-    background-color: #4CAF50; /* Green */
-    color: white;
+    background-color: #773344; /* Green */
+    color: #E3B5A4;
+
 }
