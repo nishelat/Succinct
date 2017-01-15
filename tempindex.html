@@ -72,22 +72,52 @@
         text-align: center;
       }
 
+      #slide {
+        background-color: white;
+        height: 400px;
+        padding: 20px 150px;
+      }
+      #point {
+        display: inline-block;
+        float:right;
+        margin: 30px 10px 30px 80px;
+        padding: 20px;
+        background-color: green;
+      }
+      #picture {
+        display: inline-block;
+        float: left;
+        margin: 30px 300px 30px 10px;
+        padding: 20px;
+        background-color: blue;
+      }
+
 
     </style>
 
 
+
     <body class="text-center">
+
+<!-- Input bar -->
 
       <div id="inputArea" style="display: none">
           <h2>Enter text here:</h2>
         
           <textarea class="form-control" rows="3" type="text" name="essay"></textarea>
           <div><input id="button" class="btn btn-success" type="submit" value="Submit"></div>
-
-          <div id="point"></div>
           
       </div>
 
+<!-- Slide -->
+      <div id="slide" class="containter">
+          <div id="point"></div>
+          <div id="picture"><span>insert picture hereeee</span></div>
+      </div>
+
+
+
+<!-- Welcome page -->
 
       <div id="main" class="container">
           <h1 id="title">Welcome to [NAME]</h1>
@@ -97,12 +127,15 @@
           </div>  
       </div>
 
+<!-- Scripts -->
 
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="jquery-3.1.1.min.js"></script>
 
 
     </body>
+
+<!-- Footer -->
 
     <footer class="text-center">
 
