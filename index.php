@@ -180,7 +180,7 @@
 
   <div>
     <form id="inputParagraph" action="">
-      <textarea id="textparagraph" class="form-control" rows="7" type="text" placeholder="Enter essay here..." name="tagB"></textarea>
+      <textarea id="textparagraph" class="form-control" rows="18" type="text" placeholder="Enter essay here..." name="tagB"></textarea>
       <a href="#slide" id="buttonB" class="btn btn-success" type="button" value="Submit">Create slide</a>
     </form>
   </div>
