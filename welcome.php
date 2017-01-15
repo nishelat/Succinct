@@ -13,7 +13,7 @@
 
     <style>
       body {
-        font-family: Futura;
+        font-family: futuracustom;
         /*background-color: #dddddd;*/
         background-image: url("man.gif");
         background-size: 500px;
@@ -21,7 +21,10 @@
         background-repeat: no-repeat;
         margin: 20px;
       }
-
+      @font-face {
+        font-family: futuracustom;
+        src: url('fonts/futuracustom.ttf');
+      }
       @keyframes fadeOut {
         from {opacity: 1;}
         to {opacity: 0;}
