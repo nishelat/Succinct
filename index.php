@@ -7,8 +7,30 @@
     
       <title>Succinct</title>
       <link rel="stylesheet" href="css/bootstrap.css">
+
+      <script src="jquery-3.1.1.min.js"></script>
+      <script>
+          $(document).ready(function(){
+            $("buttonB").on('click', function(event) {
+              if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+
+                $('html, body').animate({
+                  scrollTop: $(hash).offset().top
+                }, 700, function(){
+             
+                  window.location.hash = hash;
+                });
+              }
+            });
+          });
+      </script>
+
       <script src="https://apis.google.com/js/api.js"></script>
       <script src="script.js"></script>
+
+
     </head>
 
     <style>
@@ -37,15 +59,18 @@
 
       #slide {
         background-color: white;
-        height: 475px;
+        height: 620px;
         padding: 20px 20px;
+        margin-top: 100px;
+        margin-bottom: 20px;
       }
       #point {
         position: absolute;
-        top: 55%;
+        top:850px;
         right: 10%;
         text-align: left;
-        width: 500px;
+        width: 38%;
+        font-size: 16px;
       }
       #picture {
         background-color: blue;
@@ -54,8 +79,8 @@
         left: 10%;
       }
       .btn {
-        margin: 5px;
-        width: 100px;
+        width: 100%;
+        margin-top: 5px;
       }
       #heading {
         outline: none;
@@ -68,6 +93,7 @@
         float: left;
         width: 40%;
         padding-bottom: 500px;
+
       }
 
       #image1 {
@@ -75,8 +101,9 @@
         object-fit: cover;
         width: 200px;
         height: 200px;
+        
       }
-      #image2 {
+/*      #image2 {
         padding: 5px;
         object-fit: cover;
         width: 200px;
@@ -93,8 +120,39 @@
         object-fit: cover;
         width: 200px;
         height: 200px;
+      }*/
+      #texttitle {
+        font-size: 36px;
+      }
+      #textparagraph {
+        padding: 40px 100px;
+        text-align: left;
+        font-size: 14px;
+      }
+      .header {
+        margin: 0 30px;
+      }
+      #us {
+        text-align: inline-block;
+        float: left;
+        font-size: 30px;
+      }
+      a {
+        text-align: inline-block;
+        float: right;
+        margin-left: 10px;
+        padding: 4 30px;
+        font-size: 18px;
+        text-decoration: none;
+        color: black;
+        transition: .2s;
       }
 
+      a:hover {
+        text-decoration: none;
+        color: white;
+        background-color: black;
+      }
 
     </style>
 
@@ -105,24 +163,31 @@
 
 <!-- Input bar and slide -->
 
+<div class="header">
+  <span id="us">Succinct</span>
+  <a href="welcome.php">Home</a>
+  <a href="index.php">Reset</a>
+</div>
+
 <div id="inputArea" style="animation-name: fadeIn; animation-duration: 0.5s;">
   <div>
     <form id="inputform" action="">
-      <textarea class="form-control" rows="2" type="text" placeholder="Enter title" name="tag"></textarea>
+      <textarea id="texttitle" class="form-control" rows="1" type="text" placeholder="Enter title" name="tag"></textarea>
       <input id="button" class="btn btn-success" type="submit" value="Submit">
     </form>
   </div>
 
   <div>
-    <form id="inputform" action="">
-      <textarea class="form-control" rows="2" type="text" placeholder="Enter bullet points" name="tagB"></textarea>
-      <input id="buttonB" class="btn btn-success" type="button" value="Submit">
+    <form id="inputParagraph" action="">
+      <textarea id="textparagraph" class="form-control" rows="18" type="text" placeholder="Enter essay here..." name="tagB"></textarea>
+      <a href="#slide" id="buttonB" class="btn btn-success" type="button" value="Submit">Create slide</a>
     </form>
   </div>
 
   <div id="slide" class="containter">
     <div>
       <input id="heading" placeholder="Enter title here...">
+      <hr>
     </div>
   <div id="point"></div>
 
@@ -188,7 +253,7 @@
 
 <!-- Scripts -->
 
-<script src="jquery-3.1.1.min.js"></script>
+
 
 </body>
 
