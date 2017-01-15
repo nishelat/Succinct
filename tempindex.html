@@ -1,20 +1,116 @@
 <html>
-  <head>
+    <head>
 
-    <script src="https://apis.google.com/js/api.js"></script>
-    <script src="script.js"></script>
-  </head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      <title>NAME</title>
+      <link rel="stylesheet" href="css/bootstrap.css">
+      <script src="https://apis.google.com/js/api.js"></script>
+      <script src="script.js"></script>
+    </head>
+
+    <style>
+      body {
+        font-family: Futura;
+        background-color: #dddddd;
+        margin: 20px;
+      }
+
+      #main {
+        margin-top:180px;
+      }
+      #title {
+        font-size: 50px;
+      }
+
+      .createPresentation {
+        background-color:#7F7979;
+        opacity: 0.7;
+        -moz-border-radius:8px;
+        -webkit-border-radius:8px;
+        border-radius:8px;
+        display:inline-block;
+        cursor:pointer;
+        color: white;
+
+        font-family: Futura;
+        font-size:50px;
+        padding:13px 32px;
+        text-decoration: none;
+        
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .createPresentation:hover {
+          -webkit-transform: scale(1.01);
+          -moz-transform: scale(1.01);
+          -ms-transform: scale(1.01);
+          -o-transform: scale(1.01);
+          transform: scale(1.01);
+          background-color: black;
+          color: white;
+          text-decoration: none;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 20px;
+      }
+
+      #inputArea {
+        margin: 20px;
+      }
+
+      .form-control {
+        text-align: center;
+      }
 
 
-  <body>
-    <h1>Natural Language API<h1>
-    <h2>Enter text here:</h2>
-  
-    <textarea type="text" name="essay"></textarea><input id="button" type="submit" value="Submit">
+    </style>
 
 
-    <div id="point"></div>
+    <body class="text-center">
+
+      <div id="inputArea">
+          <h2>Enter text here:</h2>
+        
+          <textarea class="form-control" rows="3" type="text" name="essay"></textarea>
+          <div><input id="button" class="btn btn-success" type="submit" value="Submit"></div>
+
+          <div id="point"></div>
+          
+      </div>
 
 
-  </body>
+      <div id="main" class="container">
+          <h1 id="title">Welcome to [NAME]</h1>
+
+          <div>
+            <a href="create.html" class="text-center createPresentation">Create your presentation</a>
+          </div>
+
+      </div>
+
+
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+    </body>
+
+    <footer class="text-center">
+
+        <div>
+          <h4>Created at HackUCI by the team: The Visual Basics</h4>
+        </div>
+
+    </footer>
+
+
 </html>
