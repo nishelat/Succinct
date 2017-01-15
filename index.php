@@ -35,9 +35,14 @@
 
     <style>
       body {
-        font-family: Futura;
+        font-family: futuracustom;
         background-color: #dddddd;
         margin: 20px;
+        cursor: default;
+      }
+      @font-face {
+        font-family: futuracustom;
+        src: url('fonts/futuracustom.ttf');
       }
       @keyframes fadeIn {
         from {opacity: 0;}
@@ -167,7 +172,7 @@
   <div>
     <form id="inputform" action="">
       <textarea id="texttitle" class="form-control" rows="1" type="text" placeholder="Enter a specific title! Submitting 'Cowboys' will not as accurate as 'American Cowboys,' for example." name="tag"></textarea>
-      <input id="button" class="btn btn-success" type="submit" value="Submit">
+      <input id="button" href="#inputParagraph" class="btn btn-success" type="submit" value="Submit">
     </form>
   </div>
 
@@ -175,7 +180,7 @@
 
   <div>
     <form id="inputParagraph" action="">
-      <textarea id="textparagraph" class="form-control" rows="18" type="text" placeholder="Enter essay here..." name="tagB"></textarea>
+      <textarea id="textparagraph" class="form-control" rows="7" type="text" placeholder="Enter essay here..." name="tagB"></textarea>
       <a href="#slide" id="buttonB" class="btn btn-success" type="button" value="Submit">Create slide</a>
     </form>
   </div>
