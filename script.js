@@ -1,13 +1,13 @@
 
 function start() {
 
-        document.getElementById('button').addEventListener('click', function() {
+        document.getElementById('buttonB').addEventListener('click', function() {
 
           var arrayOfSentences = []; // stores the sentences within the inputted paragraph
           var previous = 0; // keeps track of where to begin new sentence
           var count = 0; // keeps track of the number of sentences
 
-          var input = document.getElementsByName("tag")[0].value; // takes in input from textarea
+          var input = document.getElementsByName("tagB")[0].value; // takes in input from textarea
 
           for (var i = 0; i<input.length-1; i++) {
             if (input[i]==='.') {

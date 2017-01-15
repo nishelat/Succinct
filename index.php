@@ -42,7 +42,7 @@
       }
       #point {
         position: absolute;
-        top: 35%;
+        top: 55%;
         right: 10%;
         text-align: left;
         width: 500px;
@@ -64,6 +64,33 @@
         text-align: center;
       }
 
+      #imagewrapper {
+        float: left;
+        width: 40%;
+        padding-bottom: 500px;
+      }
+
+      #image1 {
+        object-fit: cover;
+        width: 200px;
+        height: 200px;
+      }
+      #image2 {
+        object-fit: cover;
+        width: 200px;
+        height: 200px;
+      }
+      #image3 {
+        object-fit: cover;
+        width: 200px;
+        height: 200px;
+      }
+      #image4 {
+        object-fit: cover;
+        width: 200px;
+        height: 200px;
+      }
+
 
     </style>
 
@@ -78,15 +105,23 @@
         
           <div>
             <form id="inputform" action="">
-              <textarea class="form-control" rows="2" type="text" placeholder="Enter bullet points here..." name="tag"></textarea>
-              <input id="button" class="btn btn-success" type="button" value="Submit">
+              <textarea class="form-control" rows="2" type="text" placeholder="Enter title" name="tag"></textarea>
+              <input id="button" class="btn btn-success" type="submit" value="Submit">
             </form>
           </div>
+
+          <div>
+            <form id="inputform" action="">
+              <textarea class="form-control" rows="2" type="text" placeholder="Enter bullet points" name="tagB"></textarea>
+              <input id="buttonB" class="btn btn-success" type="button" value="Submit">
+            </form>
+          </div>
+
 
           <div id="slide" class="containter">
               <div><input id="heading" placeholder="Enter title here..."></div>
               <div id="point"></div>
-              <!--     <?php
+             <?php
 
 if(!empty($_GET['tag'])) {
   $url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=eca302393f034b5435dbe39c81103a10&tags=' . urlencode($_GET['tag']) . '&safe_search=1&sort=relevance&format=json&nojsoncallback=1';
@@ -97,9 +132,27 @@ if(!empty($_GET['tag'])) {
   $id = $array['photos']['photo'][0]['id'];
   $secret = $array['photos']['photo'][0]['secret'];
   $image_source = 'https://farm' . $farm_id . '.staticflickr.com/' . $server_id . '/' . $id . '_' . $secret . '.jpg';
-  echo '<img style="float: left; margin-top: 10px;"height="275" src=' . $image_source . '>';
+  echo '<div id="imagewrapper"><img id="image1" style="float: left; margin-top: 10px;"height="275" src=' . $image_source . '>';
+  $farm_id = $array['photos']['photo'][1]['farm'];
+  $server_id = $array['photos']['photo'][1]['server'];
+  $id = $array['photos']['photo'][1]['id'];
+  $secret = $array['photos']['photo'][1]['secret'];
+  $image_source = 'https://farm' . $farm_id . '.staticflickr.com/' . $server_id . '/' . $id . '_' . $secret . '.jpg';
+  echo '<img id="image2" style="float: left; margin-top: 10px;"height="275" src=' . $image_source . '>';
+  $farm_id = $array['photos']['photo'][2]['farm'];
+  $server_id = $array['photos']['photo'][2]['server'];
+  $id = $array['photos']['photo'][2]['id'];
+  $secret = $array['photos']['photo'][2]['secret'];
+  $image_source = 'https://farm' . $farm_id . '.staticflickr.com/' . $server_id . '/' . $id . '_' . $secret . '.jpg';
+  echo '<img id="image3" style="float: left; margin-top: 10px;"height="275" src=' . $image_source . '>';
+  $farm_id = $array['photos']['photo'][3]['farm'];
+  $server_id = $array['photos']['photo'][3]['server'];
+  $id = $array['photos']['photo'][3]['id'];
+  $secret = $array['photos']['photo'][3]['secret'];
+  $image_source = 'https://farm' . $farm_id . '.staticflickr.com/' . $server_id . '/' . $id . '_' . $secret . '.jpg';
+  echo '<img id="image4" style="float: left; margin-top: 10px;"height="275" src=' . $image_source . '></div>';
 }
-?> -->
+?>
           </div>
           
       </div>
@@ -115,9 +168,9 @@ if(!empty($_GET['tag'])) {
 
     <footer class="text-center">
 
-        <div>
+        <!-- <div>
           <h5 style="margin-left: 40px;">Created at HackUCI by the team: The Visual Basics</h5>
-        </div>
+        </div> -->
 
     </footer>
 
