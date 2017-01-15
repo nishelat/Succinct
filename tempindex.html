@@ -61,7 +61,7 @@
 
       footer {
         position: absolute;
-        bottom: 20px;
+        bottom: 10px;
       }
 
       #inputArea {
@@ -70,26 +70,36 @@
 
       .form-control {
         text-align: center;
+        font-size: 14px;
       }
 
       #slide {
         background-color: white;
-        height: 400px;
+        height: 475px;
         padding: 20px 150px;
       }
       #point {
-        display: inline-block;
-        float:right;
-        margin: 30px 10px 30px 80px;
-        padding: 20px;
-        background-color: green;
+        position: absolute;
+        top: 35%;
+        right: 10%;
+        text-align: left;
+        width: 500px;
       }
       #picture {
-        display: inline-block;
-        float: left;
-        margin: 30px 300px 30px 10px;
-        padding: 20px;
         background-color: blue;
+        position: absolute;
+        top: 33%;
+        left: 10%;
+      }
+      .btn {
+        margin: 5px;
+        width: 100px;
+      }
+      #heading {
+        outline: none;
+        border: white;
+        font-size: 32px;
+        text-align: center;
       }
 
 
@@ -99,22 +109,22 @@
 
     <body class="text-center">
 
-<!-- Input bar -->
+<!-- Input bar and slide -->
 
       <div id="inputArea" style="display: none">
-          <h2>Enter text here:</h2>
         
-          <textarea class="form-control" rows="3" type="text" name="essay"></textarea>
-          <div><input id="button" class="btn btn-success" type="submit" value="Submit"></div>
+          <div>
+            <textarea class="form-control" rows="2" type="text" name="essay">Enter sentence to bullet point here...</textarea>
+            <input id="button" class="btn btn-success" type="submit" value="Submit">
+          </div>
+
+          <div id="slide" class="containter">
+              <div><input id="heading" value="Enter title here..."></div>
+              <div id="point"></div>
+              <img id="picture" src="http://www.freedigitalphotos.net/images/img/homepage/87357.jpg" height="275">
+          </div>
           
       </div>
-
-<!-- Slide -->
-      <div id="slide" class="containter">
-          <div id="point"></div>
-          <div id="picture"><span>insert picture hereeee</span></div>
-      </div>
-
 
 
 <!-- Welcome page -->
@@ -140,7 +150,7 @@
     <footer class="text-center">
 
         <div>
-          <h4>Created at HackUCI by the team: The Visual Basics</h4>
+          <h5>Created at HackUCI by the team: The Visual Basics</h5>
         </div>
 
     </footer>
