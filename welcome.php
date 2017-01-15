@@ -27,7 +27,6 @@
       }
       #title {
         font-size: 90px;
-        padding-top: 180px;
         padding-bottom: 40px;
       }
 
@@ -124,6 +123,8 @@
     <a href="#">Contact</a>
   </div>
 </div>
+
+<img style = "float: center; padding-top: 40px; padding-bottom: 10px"; src="succinctlogo.png" width = 420px>
 <div id="main" class="container">
   <h1 id="title">Welcome to Succinct.</h1>
 </div>
