@@ -9,6 +9,7 @@
       <link rel="stylesheet" href="css/bootstrap.css">
       <script src="https://apis.google.com/js/api.js"></script>
       <script src="script.js"></script>
+      <script src="switch.js"></script>
     </head>
 
     <style>
@@ -77,7 +78,7 @@
 
     <body class="text-center">
 
-      <div id="inputArea">
+      <div id="inputArea" style="display: none">
           <h2>Enter text here:</h2>
         
           <textarea class="form-control" rows="3" type="text" name="essay"></textarea>
@@ -91,10 +92,9 @@
       <div id="main" class="container">
           <h1 id="title">Welcome to [NAME]</h1>
 
-          <div>
-            <a href="create.html" class="text-center createPresentation">Create your presentation</a>
-          </div>
-
+          <div id="startbutton">
+              <button class="text-center createPresentation" type="submit">Create presentation</button>
+          </div>  
       </div>
 
 
