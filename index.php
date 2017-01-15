@@ -59,14 +59,14 @@
 
       #slide {
         background-color: white;
-        height: 620px;
+        height: 660px;
         padding: 20px 20px;
         margin-top: 65px;
         margin-bottom: 20px;
       }
       #point {
         position: absolute;
-        top:950px;
+        top:1000px;
         right: 10%;
         text-align: left;
         width: 38%;
@@ -92,7 +92,8 @@
       #imagewrapper {
         float: left;
         width: 50%;
-        padding: 5px 50px;
+        padding: 80px 75px;
+
 
       }
       .image {
@@ -137,6 +138,16 @@
         background-color: black;
       }
 
+      .titleStyle {
+        font-size: 50px;
+        margin: 30px 30px 5px 30px;
+      }
+      hr {
+        width: 500px;
+        color: blue;
+      }
+
+
     </style>
 
 
@@ -159,6 +170,8 @@
       <input id="button" class="btn btn-success" type="submit" value="Submit">
     </form>
   </div>
+
+
 
   <div>
     <form id="inputParagraph" action="">
@@ -191,9 +204,12 @@
       echo '<img class="image" style="float: left; margin-top: 10px;"height="275" src=' . $image_source . '>';
     }
     echo '</div>';
-    echo '<div style="font-size: 50px">' . $_GET['tag'] . '</div>';
+    echo '<div class="titleStyle">' . $_GET['tag'] . '</div>';
   }
   ?>
+
+  <hr>
+
   </div>        
 </div>
 
