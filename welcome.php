@@ -15,8 +15,9 @@
       body {
         font-family: Futura;
         /*background-color: #dddddd;*/
-        background-image: url("bg.jpg");
-        background-size: cover;
+        background-image: url("man.gif");
+        background-size: 500px;
+        background-position: right bottom;
         background-repeat: no-repeat;
         margin: 20px;
       }
@@ -25,7 +26,9 @@
         /*margin-top: 40px;*/
       }
       #title {
-        font-size: 70px;
+        font-size: 90px;
+        padding-top: 180px;
+        padding-bottom: 40px;
       }
 
       /* The container <div> - needed to position the dropdown content */
@@ -114,7 +117,7 @@
 <!-- Welcome page -->
 
 <div class="dropdown">
-  <input type = "image" style = "float: left;" src="hamburger.png" width = 40px height = 40px>
+  <input type = "image" style = "float: left;" position:absolute; top: 20px; src="hamburger.png" width = 40px height = 40px>
   <div class="dropdown-content">
     <a href="#">About</a>
     <a href="#">Forums</a>
@@ -122,7 +125,7 @@
   </div>
 </div>
 <div id="main" class="container">
-  <h1 id="title">Welcome to Succinct</h1>
+  <h1 id="title">Welcome to Succinct.</h1>
 </div>
 <div id="startbutton">
   <a href="index.php"><button class="text-center createPresentation">Click to Get Started!</button></a>
