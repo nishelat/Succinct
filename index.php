@@ -71,7 +71,7 @@
       }
       #point {
         position: absolute;
-        top:975px;
+        top:985px;
         right: 10%;
         text-align: left;
         width: 38%;
@@ -145,11 +145,23 @@
 
       .titleStyle {
         font-size: 50px;
-        margin: 30px 30px 5px 30px;
+        margin: 30px 30px -10px 30px;
       }
       hr {
         width: 500px;
         color: blue;
+      }
+      #logo {
+        position: absolute;
+        top: 20px;
+        left: 60px;
+        height: 42px;
+      }
+      #succinct {
+        position: absolute;
+        top: 25px;
+        font-size: 24px;
+        left: 155px;
       }
 
 
@@ -163,7 +175,8 @@
 <!-- Input bar and slide -->
 
 <div class="header">
-  <span id="us"><a href="welcome.php"><b>Succinct</b></a></span>
+  <img id="logo" src="succinctlogo.png">
+  <span id="succinct">Succinct</span>
   <a href="welcome.php">Home</a>
   <a href="index.php">Reset</a>
 </div>
@@ -180,7 +193,7 @@
 
   <div>
     <form id="inputParagraph" action="">
-      <textarea id="textparagraph" class="form-control" rows="18" type="text" placeholder="Enter essay here..." name="tagB"></textarea>
+      <textarea id="textparagraph" class="form-control" rows="13" type="text" placeholder="Enter essay here..." name="tagB"></textarea>
       <a href="#slide" id="buttonB" class="btn btn-success" type="button" value="Submit">Create slide</a>
     </form>
   </div>
