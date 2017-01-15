@@ -31,7 +31,7 @@
         /*margin-top: 40px;*/
       }
       #title {
-        font-size: 90px;
+        font-size: 70px;
         padding-bottom: 40px;
       }
 
