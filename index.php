@@ -61,16 +61,16 @@
         background-color: white;
         height: 620px;
         padding: 20px 20px;
-        margin-top: 100px;
+        margin-top: 65px;
         margin-bottom: 20px;
       }
       #point {
         position: absolute;
-        top:850px;
+        top:950px;
         right: 10%;
         text-align: left;
         width: 38%;
-        font-size: 16px;
+        font-size: 19px;
       }
       #picture {
         background-color: blue;
@@ -91,46 +91,29 @@
 
       #imagewrapper {
         float: left;
-        width: 40%;
-        padding-bottom: 500px;
+        width: 50%;
+        padding: 5px 50px;
 
       }
-
-      #image1 {
+      .image {
         padding: 5px;
         object-fit: cover;
         width: 200px;
         height: 200px;
+        float: left;
         
       }
-/*      #image2 {
-        padding: 5px;
-        object-fit: cover;
-        width: 200px;
-        height: 200px;
-      }
-      #image3 {
-        padding: 5px;
-        object-fit: cover;
-        width: 200px;
-        height: 200px;
-      }
-      #image4 {
-        padding: 5px;
-        object-fit: cover;
-        width: 200px;
-        height: 200px;
-      }*/
       #texttitle {
-        font-size: 36px;
+        font-size: 24px;
       }
       #textparagraph {
         padding: 40px 100px;
         text-align: left;
-        font-size: 14px;
+        font-size: 20px;
       }
       .header {
         margin: 0 30px;
+        padding-bottom: 40px;
       }
       #us {
         text-align: inline-block;
@@ -164,7 +147,7 @@
 <!-- Input bar and slide -->
 
 <div class="header">
-  <span id="us">Succinct</span>
+  <span id="us"><a href="welcome.php"><b>Succinct</b></a></span>
   <a href="welcome.php">Home</a>
   <a href="index.php">Reset</a>
 </div>
@@ -172,7 +155,7 @@
 <div id="inputArea" style="animation-name: fadeIn; animation-duration: 0.5s;">
   <div>
     <form id="inputform" action="">
-      <textarea id="texttitle" class="form-control" rows="1" type="text" placeholder="Enter title" name="tag"></textarea>
+      <textarea id="texttitle" class="form-control" rows="1" type="text" placeholder="Enter a specific title! Submitting 'Cowboys' will not as accurate as 'American Cowboys,' for example." name="tag"></textarea>
       <input id="button" class="btn btn-success" type="submit" value="Submit">
     </form>
   </div>
@@ -185,10 +168,6 @@
   </div>
 
   <div id="slide" class="containter">
-    <div>
-      <input id="heading" placeholder="Enter title here...">
-      <hr>
-    </div>
   <div id="point"></div>
 
   <?php
@@ -199,6 +178,7 @@
     $json = file_get_contents($url);
     $array = json_decode($json, true);
 
+    echo '<div id="imagewrapper">';
     $loop_counter = 0;
     foreach($array['photos']['photo'] as $_array) {
       if ($loop_counter++ == 4) break;
@@ -208,45 +188,11 @@
       $secret = $_array['secret'];
 
       $image_source = 'https://farm' . $farm_id . '.staticflickr.com/' . $server_id . '/' . $id . '_' . $secret . '.jpg';
-      echo '<div id="imagewrapper"><img id="image1" style="float: left; margin-top: 10px;"height="275" src=' . $image_source . '>';
+      echo '<img class="image" style="float: left; margin-top: 10px;"height="275" src=' . $image_source . '>';
     }
+    echo '</div>';
+    echo '<div style="font-size: 50px">' . $_GET['tag'] . '</div>';
   }
-
-  /*
-  $farm_id = $array['photos']['photo'][0]['farm'];
-  $server_id = $array['photos']['photo'][0]['server'];
-  $id = $array['photos']['photo'][0]['id'];
-  $secret = $array['photos']['photo'][0]['secret'];
-
-  $image_source = 'https://farm' . $farm_id . '.staticflickr.com/' . $server_id . '/' . $id . '_' . $secret . '.jpg';
-  echo '<div id="imagewrapper"><img id="image1" style="float: left; margin-top: 10px;"height="275" src=' . $image_source . '>';
-
-  $farm_id = $array['photos']['photo'][1]['farm'];
-  $server_id = $array['photos']['photo'][1]['server'];
-  $id = $array['photos']['photo'][1]['id'];
-  $secret = $array['photos']['photo'][1]['secret'];
-
-  $image_source = 'https://farm' . $farm_id . '.staticflickr.com/' . $server_id . '/' . $id . '_' . $secret . '.jpg';
-  echo '<img id="image2" style="float: left; margin-top: 10px;"height="275" src=' . $image_source . '>';
-
-  $farm_id = $array['photos']['photo'][2]['farm'];
-  $server_id = $array['photos']['photo'][2]['server'];
-  $id = $array['photos']['photo'][2]['id'];
-  $secret = $array['photos']['photo'][2]['secret'];
-
-  $image_source = 'https://farm' . $farm_id . '.staticflickr.com/' . $server_id . '/' . $id . '_' . $secret . '.jpg';
-  echo '<img id="image3" style="float: left; margin-top: 10px;"height="275" src=' . $image_source . '>';
-
-  $farm_id = $array['photos']['photo'][3]['farm'];
-  $server_id = $array['photos']['photo'][3]['server'];
-  $id = $array['photos']['photo'][3]['id'];
-  $secret = $array['photos']['photo'][3]['secret'];
-
-  $image_source = 'https://farm' . $farm_id . '.staticflickr.com/' . $server_id . '/' . $id . '_' . $secret . '.jpg';
-  echo '<img id="image4" style="float: left; margin-top: 10px;"height="275" src=' . $image_source . '></div>';
-  }
-  */
-
   ?>
   </div>        
 </div>
