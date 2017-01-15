@@ -3,17 +3,11 @@ function start() {
 
         document.getElementById('button').addEventListener('click', function() {
 
-          /* these next two snippets separated the sentences in paragraphs, didn't work with the API though....
-
           var arrayOfSentences = []; // stores the sentences within the inputted paragraph
           var previous = 0; // keeps track of where to begin new sentence
           var count = 0; // keeps track of the number of sentences
 
-          */
-      
           var input = document.getElementsByName("tag")[0].value; // takes in input from textarea
-
-          /*
 
           for (var i = 0; i<input.length-1; i++) {
             if (input[i]==='.') {
@@ -24,11 +18,7 @@ function start() {
             }
           }
 
-          */
-        
-                 
-
-            gapi.client.init({
+          var thing = function(sentence) { gapi.client.init({
               'apiKey': 'AIzaSyAAUG25gfbw5GcFuMSSt-FeRHMSoq-7OhA',
               'discoveryDocs': ['https://language.googleapis.com/$discovery/rest?version=v1beta1']
             }).then(function() {
@@ -36,7 +26,7 @@ function start() {
               return gapi.client.language.documents.analyzeEntities({
                 "document":{
                     "type":"PLAIN_TEXT",
-                    "content": input // sentences don't work :(
+                    "content": sentence // sentences don't work :(
                   },
                   "encodingType":"UTF8"
               });
@@ -75,7 +65,14 @@ function start() {
             }, function(reason) {
               console.log('Error: ' + reason.result.error.message);
             });
+          };
+
+          for (var i=0; i<count; i++) {
+            thing(arrayOfSentences[i]);
+          }
+
         });
+
 
       };
       gapi.load('client', start);

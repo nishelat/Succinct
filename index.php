@@ -86,7 +86,7 @@
           <div id="slide" class="containter">
               <div><input id="heading" placeholder="Enter title here..."></div>
               <div id="point"></div>
-                  <?php
+              <!--     <?php
 
 if(!empty($_GET['tag'])) {
   $url = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=eca302393f034b5435dbe39c81103a10&tags=' . urlencode($_GET['tag']) . '&safe_search=1&sort=relevance&format=json&nojsoncallback=1';
@@ -99,7 +99,7 @@ if(!empty($_GET['tag'])) {
   $image_source = 'https://farm' . $farm_id . '.staticflickr.com/' . $server_id . '/' . $id . '_' . $secret . '.jpg';
   echo '<img style="float: left; margin-top: 10px;"height="275" src=' . $image_source . '>';
 }
-?>
+?> -->
           </div>
           
       </div>
