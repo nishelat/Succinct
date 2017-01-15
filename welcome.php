@@ -4,6 +4,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" href="favicon.png"/>
     
       <title>Succinct</title>
       <link rel="stylesheet" href="css/bootstrap.css">
@@ -80,7 +81,7 @@
         cursor:pointer;
         color: white;
 
-        font-family: Futura;
+        font-family: futuracustom;
         font-size:30px;
         padding:13px 32px;
         text-decoration: none;
