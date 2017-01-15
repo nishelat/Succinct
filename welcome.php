@@ -8,7 +8,7 @@
       <title>Succinct</title>
       <link rel="stylesheet" href="css/bootstrap.css">
       <script src="https://apis.google.com/js/api.js"></script>
-      <script src="script.js"></script>
+      
     </head>
 
     <style>
@@ -20,6 +20,11 @@
         background-position: right bottom;
         background-repeat: no-repeat;
         margin: 20px;
+      }
+
+      @keyframes fadeOut {
+        from {opacity: 1;}
+        to {opacity: 0;}
       }
 
       #main {
@@ -129,7 +134,7 @@
   <h1 id="title">Welcome to Succinct.</h1>
 </div>
 <div id="startbutton">
-  <a href="index.php"><button class="text-center createPresentation">Click to Get Started!</button></a>
+  <button id="beginbutton" class="text-center createPresentation">Click to Get Started!</button>
 </div>
 
     
@@ -137,6 +142,16 @@
 <!-- Scripts -->
 
       <script src="jquery-3.1.1.min.js"></script>
+
+      <script>
+        document.getElementById('beginbutton').addEventListener('click', function() {
+          document.body.style.animation = "fadeOut 1s";
+          setTimeout(function() {
+            window.location.href = "index.php";
+        }, 1000);
+
+        });
+      </script>
 
     </body>
 
