@@ -5,11 +5,10 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
     
-      <title>NAME</title>
+      <title>Succinct</title>
       <link rel="stylesheet" href="css/bootstrap.css">
       <script src="https://apis.google.com/js/api.js"></script>
       <script src="script.js"></script>
-      <script src="switch.js"></script>
     </head>
 
     <style>
@@ -73,35 +72,7 @@
         font-size: 14px;
       }
 
-      #slide {
-        background-color: white;
-        height: 475px;
-        padding: 20px 150px;
-      }
-      #point {
-        position: absolute;
-        top: 35%;
-        right: 10%;
-        text-align: left;
-        width: 500px;
-      }
-      #picture {
-        background-color: blue;
-        position: absolute;
-        top: 33%;
-        left: 10%;
-      }
-      .btn {
-        margin: 5px;
-        width: 100px;
-      }
-      #heading {
-        outline: none;
-        border: white;
-        font-size: 32px;
-        text-align: center;
-      }
-
+  
 
     </style>
 
@@ -109,51 +80,21 @@
 
     <body class="text-center">
 
-<!-- Input bar and slide -->
-
-      <div id="inputArea" style="display: none">
-        
-          <div>
-            <textarea class="form-control" rows="2" type="text" placeholder="Enter bullet points here..." name="essay"></textarea>
-            <input id="button" class="btn btn-success" type="submit" value="Submit">
-          </div>
-
-          <div id="slide" class="containter">
-              <div><input id="heading" placeholder="Enter title here..."></div>
-              <div id="point"></div>
-              <img id="picture" src="http://www.freedigitalphotos.net/images/img/homepage/87357.jpg" height="275">
-          </div>
-          
-      </div>
-
-
 <!-- Welcome page -->
 
       <div id="main" class="container">
-          <h1 id="title">Welcome to [NAME]</h1>
+          <h1 id="title">Welcome to Succinct</h1>
 
           <div id="startbutton">
-              <button class="text-center createPresentation" type="submit">Create presentation</button>
-          </div>  
+              <a href="index.php"><button class="text-center createPresentation">Create presentation</button></a>
+          </div>
       </div>
 
 <!-- Scripts -->
 
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <script src="jquery-3.1.1.min.js"></script>
 
 
     </body>
-
-<!-- Footer -->
-
-    <footer class="text-center">
-
-        <div>
-          <h5 style="margin-left: 40px;">Created at HackUCI by the team: The Visual Basics</h5>
-        </div>
-
-    </footer>
-
 
 </html>

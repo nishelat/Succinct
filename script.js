@@ -1,3 +1,4 @@
+
 function start() {
 
         document.getElementById('button').addEventListener('click', function() {
@@ -10,7 +11,7 @@ function start() {
 
           */
       
-          var input = document.getElementsByName("essay")[0].value; // takes in input from textarea
+          var input = document.getElementsByName("tag")[0].value; // takes in input from textarea
 
           /*
 
@@ -56,7 +57,9 @@ function start() {
 
                 // split with commas
                 for (var i=0; i<len; i++) {
-                  document.getElementById('point').innerHTML += resp.result.entities[i].mentions[0].text.content; 
+                  document.getElementById('point').innerHTML += resp.result.entities[i].mentions[0].text.content;
+
+
                   if (i<len-1) {
                     document.getElementById('point').innerHTML += ", ";
                   }
