@@ -71,7 +71,7 @@
       }
       #point {
         position: absolute;
-        top:1000px;
+        top:975px;
         right: 10%;
         text-align: left;
         width: 38%;
