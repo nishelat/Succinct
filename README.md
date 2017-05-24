@@ -1,6 +1,7 @@
-# Succinct - Winner of HackUCI's Organizer's Choice Award
+# Succinct
 Succinct makes it easy for students and teachers to generate content on a specific topic in presentation form.  
-**Created at HackUCI on January 15, 2017**  
+**Created at HackUCI on January 15, 2017**
+**Winner: HackUCI Organizers' Choice Award**
 **Devpost:** [click here](https://devpost.com/software/succinct-9wx5mz)  
 
 ## About
