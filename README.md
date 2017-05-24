@@ -25,5 +25,6 @@ Presentations are ubiquitous in modern education; both students and teachers are
 - [Teyva Chee](https://github.com/chee98)
 - [Sarah Lu](https://github.com/sarah-lu102)
 
-(insert images here)
-(To insert images: go to issues, create an issue, paste an image, copy the markdown image link, go back to README.md, paste link)
+![gallery](https://cloud.githubusercontent.com/assets/22107628/26423796/e011034a-4083-11e7-92b3-d6cc41b818cf.jpg)
+![df](https://cloud.githubusercontent.com/assets/22107628/26423794/dffb9e56-4083-11e7-90fa-5b10d446cba6.jpg)
+![sdfg](https://cloud.githubusercontent.com/assets/22107628/26423795/e00846ba-4083-11e7-9ea2-c0cbcf568ad4.jpg)
